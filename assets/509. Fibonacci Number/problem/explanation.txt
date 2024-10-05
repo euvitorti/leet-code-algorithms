@@ -1,0 +1,34 @@
+Explanation:
+Variables a and b: Represent two consecutive numbers in the Fibonacci sequence. Initially, a = 0 and b = 1, which are the first two numbers of the sequence.
+Variable fibonacci: Stores the sum of a and b, which is the next Fibonacci number.
+for loop: At each iteration, the next Fibonacci number is calculated as the sum of a and b, and then a and b are updated to move forward in the sequence.
+
+// Step-by-step explanation of the calculations for n = 7:
+
+// fibonacci(1) = a(0) + b(1);
+// b(0) = a(1);   // Update 'b' with the previous value of 'a'
+// a(1) = fibonacci(1); // Update 'a' with the new Fibonacci value
+
+// fibonacci(1) = a(1) + b(0);
+// b(1) = a(1);   // Update 'b' with the previous value of 'a'
+// a(1) = fibonacci(1); // Update 'a' with the new Fibonacci value
+
+// fibonacci(2) = a(1) + b(1);
+// b(1) = a(1);   // Update 'b' with the previous value of 'a'
+// a(2) = fibonacci(2); // Update 'a' with the new Fibonacci value
+
+// fibonacci(3) = a(2) + b(1);
+// b(2) = a(2);   // Update 'b' with the previous value of 'a'
+// a(3) = fibonacci(3); // Update 'a' with the new Fibonacci value
+
+// fibonacci(5) = a(3) + b(2);
+// b(3) = a(3);   // Update 'b' with the previous value of 'a'
+// a(5) = fibonacci(5); // Update 'a' with the new Fibonacci value
+
+// fibonacci(8) = a(5) + b(3);
+// b(5) = a(5);   // Update 'b' with the previous value of 'a'
+// a(8) = fibonacci(8); // Update 'a' with the new Fibonacci value
+
+// fibonacci(13) = a(8) + b(5);
+// b(8) = a(8);   // Update 'b' with the previous value of 'a'
+// a(13) = fibonacci(13); // Update 'a' with the new Fibonacci value
