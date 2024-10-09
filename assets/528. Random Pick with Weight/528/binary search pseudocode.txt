@@ -1,0 +1,13 @@
+Function binarySearch(arrayPrefixos, randomNum):
+    Initialize low = 0
+    Initialize high = length of arrayPrefixos - 1
+
+    While low <= high:
+        Calculate mid = low + (high - low) // 2  (middle of the range)
+        
+        If randomNum < arrayPrefixos[mid]:
+            Adjust high = mid - 1  (search in the lower half)
+        Else:
+            Adjust low = mid + 1  (search in the upper half)
+    
+    Return low  (the smallest index such that arrayPrefixos[low] > randomNum)
