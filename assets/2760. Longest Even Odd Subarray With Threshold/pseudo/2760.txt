@@ -1,0 +1,25 @@
+Function longestAlternatingSubarray(nums, threshold):
+    maxLength = 0  // Initialize the maximum length to 0
+    n = length of nums  // Get the number of elements in the array
+
+    For i from 0 to n - 1:  // Loop through each element in the array
+        If nums[i] is even AND nums[i] <= threshold:  // Check if the current element is even and within the threshold
+            currentLength = 1  // Start a new subarray with length 1
+            currentParity = nums[i] % 2  // Store the current element's parity (0 for even, 1 for odd)
+
+            // Check subsequent elements to see if they alternate in parity and are <= threshold
+            For j from i + 1 to n - 1:
+                If nums[j] > threshold:  // If an element exceeds the threshold, stop checking
+                    Break
+                
+                If nums[j] % 2 != currentParity:  // If the parity alternates
+                    currentLength += 1  // Increment the subarray length
+                    currentParity = nums[j] % 2  // Update the current parity
+                Else:
+                    Break  // Stop if parity doesn't alternate
+
+            // Update the maximum length if the current subarray is longer
+            If currentLength > maxLength:
+                maxLength = currentLength
+
+    Return maxLength  // Return the length of the longest alternating subarray
