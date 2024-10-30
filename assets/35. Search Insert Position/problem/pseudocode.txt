@@ -1,0 +1,27 @@
+FUNCTION searchInsert(nums: array of integers, target: integer) RETURNS integer
+    SET low = 0
+    SET high = LENGTH(nums) - 1
+
+    WHILE low <= high DO
+        SET mid = low + (high - low) / 2
+
+        IF nums[mid] == target THEN
+            SET low = mid
+            BREAK
+
+        IF target < nums[mid] THEN
+            SET high = mid - 1
+        ELSE
+            SET low = mid + 1
+
+    RETURN low
+END FUNCTION
+
+Explanation of the Pseudocode:
+Function Definition: Defines a function searchInsert that takes an array of integers nums and an integer target.
+Initialization: Initializes two pointers, low and high, to define the search range.
+While Loop: Continues until the low pointer exceeds the high pointer.
+Middle Calculation: Calculates the middle index mid.
+Check for Target: If the value at mid equals the target, sets low to mid and breaks the loop.
+Adjust Pointers: Adjusts high or low based on the comparison between target and nums[mid].
+Return Statement: Returns the index where the target was found or where it should be inserted.
