@@ -1,0 +1,24 @@
+Function smallestEvenMultiple(n):
+    If n is odd:
+        Return n * 2
+    Else:
+        Return n
+
+
+Explanation:
+Function smallestEvenMultiple(n):
+
+The function takes a number n as a parameter.
+The goal of the function is to find the smallest even multiple of n.
+Condition If n is odd:
+
+If n is odd (which means the remainder of dividing n by 2 is not zero, i.e., n % 2 != 0), then:
+The function returns n * 2 because the smallest even multiple of an odd number is always the number itself multiplied by 2. For example, the smallest even multiple of 5 is 5 * 2 = 10.
+Else (if n is even):
+
+If n is not odd, meaning it is even (the remainder of dividing n by 2 is zero, i.e., n % 2 == 0), then:
+The function simply returns n because the number itself is already the smallest even multiple. For example, the smallest even multiple of 6 is 6.
+Summary of the Pseudocode:
+If n is odd: Multiply n by 2 and return that value.
+If n is even: Return n itself.
+This pseudocode describes the logic in a simple manner, focusing on the decision-making process based on whether n is odd or even, without specific details of programming syntax.
